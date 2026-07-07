@@ -10,6 +10,6 @@
   </p>
 
   <p>
-    <a href="mailto:support@example.com">Need help? Contact support</a>
+    <a href="mailto:hamurace@gmail.com">Need help? Contact support</a>
   </p>
 </div>
