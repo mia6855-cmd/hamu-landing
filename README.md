@@ -10,6 +10,6 @@
   </p>
 
   <p>
-    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hamurace@gmail.com&amp;su=Hamu%20Race%20Support">Need help? Contact support</a>
+    Support: <a href="mailto:hamurace@gmail.com?subject=Hamu%20Race%20Support">hamurace@gmail.com</a>
   </p>
 </div>

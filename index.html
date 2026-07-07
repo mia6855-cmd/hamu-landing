@@ -36,14 +36,22 @@
         >
           Download on the App Store
         </a>
-        <a
-          class="support-link"
-          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hamurace@gmail.com&amp;su=Hamu%20Race%20Support"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Need help? Contact support
-        </a>
+        <div class="support-contact" aria-label="Support contact">
+          <a
+            class="support-link"
+            href="mailto:hamurace@gmail.com?subject=Hamu%20Race%20Support"
+          >
+            Email support
+          </a>
+          <button
+            class="copy-email-button"
+            type="button"
+            data-support-email="hamurace@gmail.com"
+          >
+            Copy email
+          </button>
+          <span class="support-email">hamurace@gmail.com</span>
+        </div>
       </div>
     </main>
     <footer class="site-footer">
@@ -56,5 +64,36 @@
         Privacy Policy
       </a>
     </footer>
+    <script>
+      const copyButton = document.querySelector(".copy-email-button");
+
+      copyButton?.addEventListener("click", async () => {
+        const email = copyButton.dataset.supportEmail;
+        const originalLabel = copyButton.textContent;
+
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = email;
+            textArea.setAttribute("readonly", "");
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+            document.body.append(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            textArea.remove();
+          }
+
+          copyButton.textContent = "Copied";
+          window.setTimeout(() => {
+            copyButton.textContent = originalLabel;
+          }, 1800);
+        } catch {
+          copyButton.textContent = email;
+        }
+      });
+    </script>
   </body>
 </html>
