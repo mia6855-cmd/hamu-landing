@@ -1,0 +1,214 @@
+:root {
+  color-scheme: light;
+  --ink: #462506;
+  --soft-ink: #6f4515;
+  --button: #ff9f1c;
+  --button-highlight: #ffb429;
+  --paper: #fff8df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 50% 46%, rgb(255 252 226 / 70%), rgb(255 252 226 / 15%) 43%, rgb(255 252 226 / 0%) 70%),
+    url("background.png") center / cover no-repeat,
+    #16bff0;
+  color: var(--ink);
+  font-family: ui-rounded, "SF Pro Rounded", "Nunito", "Avenir Next", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+body::after {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(rgb(255 255 255 / 10%), rgb(255 255 255 / 0%) 28%),
+    radial-gradient(circle at 50% 98%, rgb(106 169 20 / 18%), rgb(106 169 20 / 0%) 36%);
+}
+
+.landing {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 28px;
+  text-align: center;
+}
+
+.app-icon {
+  display: block;
+  width: min(220px, 44vw, 38vh);
+  height: auto;
+  border: 5px solid rgb(255 248 223 / 82%);
+  border-radius: 28%;
+  box-shadow:
+    0 24px 48px rgb(67 118 18 / 22%),
+    0 5px 0 rgb(87 48 12 / 13%);
+}
+
+.copy {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-shadow:
+    0 3px 0 rgb(255 248 223 / 78%),
+    0 14px 32px rgb(66 47 17 / 18%);
+}
+
+p {
+  max-width: 28rem;
+  color: var(--soft-ink);
+  font-size: 1.2rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.actions {
+  display: grid;
+  justify-items: center;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.app-store-button,
+.support-link {
+  color: inherit;
+  font-weight: 850;
+  letter-spacing: 0;
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 24px;
+  border: 2px solid rgb(255 248 223 / 80%);
+  border-radius: 16px;
+  background: var(--button);
+  box-shadow:
+    0 15px 32px rgb(77 112 15 / 24%),
+    inset 0 1px 0 rgb(255 255 255 / 28%);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
+}
+
+.app-store-button:hover,
+.app-store-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 36px rgb(77 112 15 / 28%),
+    inset 0 1px 0 rgb(255 255 255 / 32%);
+  filter: saturate(1.05);
+}
+
+.support-link {
+  color: var(--soft-ink);
+  font-size: 0.98rem;
+  text-decoration-color: rgb(111 69 21 / 40%);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.support-link:hover,
+.support-link:focus-visible {
+  color: var(--ink);
+  text-decoration-color: var(--button-highlight);
+}
+
+:focus-visible {
+  outline: 3px solid var(--paper);
+  outline-offset: 4px;
+}
+
+@media (max-width: 520px) {
+  .landing {
+    padding: 22px;
+  }
+
+  .app-icon {
+    width: min(192px, 52vw, 35vh);
+    border-width: 4px;
+  }
+
+  .copy {
+    margin-top: 18px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  p {
+    max-width: 19rem;
+    font-size: 1.05rem;
+  }
+
+  .actions {
+    margin-top: 24px;
+  }
+}
+
+@media (max-height: 620px) {
+  .app-icon {
+    width: min(160px, 34vh);
+  }
+
+  .copy {
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 0.98rem;
+  }
+
+  .actions {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .app-store-button {
+    min-height: 48px;
+    padding-inline: 20px;
+  }
+}
