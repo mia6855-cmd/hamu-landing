@@ -151,6 +151,26 @@ p {
   text-decoration-color: var(--button-highlight);
 }
 
+.site-footer {
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  z-index: 2;
+}
+
+.privacy-link {
+  color: var(--soft-ink);
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.privacy-link:hover,
+.privacy-link:focus-visible {
+  color: var(--ink);
+}
+
 :focus-visible {
   outline: 3px solid var(--paper);
   outline-offset: 4px;
@@ -181,6 +201,11 @@ p {
 
   .actions {
     margin-top: 24px;
+  }
+
+  .site-footer {
+    right: 14px;
+    bottom: 12px;
   }
 }
 
