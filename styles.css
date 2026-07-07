@@ -153,9 +153,10 @@ p {
 
 .site-footer {
   position: fixed;
-  right: 20px;
+  left: 50%;
   bottom: 16px;
   z-index: 2;
+  transform: translateX(-50%);
 }
 
 .privacy-link {
@@ -204,7 +205,6 @@ p {
   }
 
   .site-footer {
-    right: 14px;
     bottom: 12px;
   }
 }
