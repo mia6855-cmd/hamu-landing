@@ -6,7 +6,7 @@
   <p><strong>A tiny cozy game for bright little breaks.</strong></p>
 
   <p>
-    <a href="https://apps.apple.com/app/id0000000000"><strong>Download on the App Store</strong></a>
+    <a href="https://apps.apple.com/us/app/hamu-race/id6788150942"><strong>Download on the App Store</strong></a>
   </p>
 
   <p>
